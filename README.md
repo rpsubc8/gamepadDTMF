@@ -13,6 +13,26 @@ Se pueden hacer pruebas con el propio testeador de joystick de Windows
 
 Se recomienda poner 500 ms en el ms Delay Between Digits a la hora de enviar.
 
+Hasta aqui tenemos la parte lógica hardware. Por tanto, entramos en la sección de construir una aplicación que se encargue de traducir las pulsaciones de botones en los códigos binarios que al final son códigos DTMF.
+<ul>
+ <li><b>0001</b> 1</li>
+ <li><b>0010</b> 2</li>
+ <li><b>0011</b> 3</li>
+ <li><b>0100</b> 4</li>
+ <li><b>0101</b> 5</li>
+ <li><b>0110</b> 6</li>
+ <li><b>0111</b> 7</li>
+ <li><b>1000</b> 8</li>
+ <li><b>1001</b> 9</li>
+ <li><b>1010</b> 10 0</li>
+ <li><b>1011</b> 11 *</li>
+ <li><b>1100</b> 12 #</li>
+ <li><b>1101</b> 13 A</li>
+ <li><b>1110</b> 14 B</li>
+ <li><b>1111</b> 15 C</li>
+ <li><b>0000</b> 16 D</li>
+</ul>
+
 El programa en Visual Basic, permite seleccionar que botones queremos usar del mando así, como a que pin del MT8870
 está asociado. El mando que se ha usado se ha optado por:
 <ul>
