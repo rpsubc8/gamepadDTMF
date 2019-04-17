@@ -1,7 +1,7 @@
 # Gamepad decodificador DTMF
 Gamepad HID decode DTMF<br>
 Gracias al chip MT8870, conectando las salidas de STQ, Q4, Q3, Q2 y Q1 a un transistor permitiendo abrir o cerrar
-los botones de un GAMEPAD, se puede decodificar tonos DTMF. Tan sólo necesitamos 4 pines (botones de mando)
+los botones de un GAMEPAD, se puede decodificar tonos DTMF. Tan sólo necesitamos 5 pines (botones de mando)
 Se ha creado como prueba de concepto un simple programa en VB6 (para que funcione en equipos viejos W95) para poder
 leer los botones y traducirlo a tonos DTMF.
 El programa está sin optimizar, así que hay que enviar los tonos lentamente.
