@@ -39,7 +39,7 @@ Hay que destacar, que cuanto más barato sea el mando, menos posibilidades exist
 
 
 Luego hacemos un agujero con el taladro para poder introducir el jack de audio del modulo MT8870 cuando queramos conectarlo para que quede bien, y terminado:
-<center><capturaSoldar04.jpg></center>
+<center><img src="capturaSoldar04.jpg"></center>
 
 
 <h2>Conclusión</h2>
