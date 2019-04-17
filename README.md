@@ -64,3 +64,6 @@ Luego hacemos un agujero con el taladro para poder introducir el jack de audio d
 
 <h2>Conclusión</h2>
 Con esto conseguimos poder decodificar DTMF con un mando, sin falta de ningún microcontrolador intermedio, y lo más importante, que el concepto se puede aplicar a gamepads viejos (conector MIDI), y equipos retro (MSDOS), así como nuevos, como móviles, pudiendo portar el concepto a HTML5.
+
+Si no queremos compilar el programa, podemos hacer uso de la versión ya compilada
+<a href="GamePadDTMF.zip">GamePadDTMF.zip</a>
