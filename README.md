@@ -67,3 +67,8 @@ Con esto conseguimos poder decodificar DTMF con un mando, sin falta de ningún m
 
 Si no queremos compilar el programa, podemos hacer uso de la versión ya compilada
 <a href="GamePadDTMF.zip">GamePadDTMF.zip</a>
+
+<h2>Histórico</h2>
+<ul>
+ <li><b>2019/04/18</b> Versión semioptimizada que permite decodificar hasta con 150 milis de espera</li>
+</ul>
