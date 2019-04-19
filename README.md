@@ -72,6 +72,23 @@ Con esto conseguimos poder decodificar DTMF con un mando, sin falta de ningún m
 Si no queremos compilar el programa, podemos hacer uso de la versión ya compilada
 <a href="GamePadDTMF.zip">GamePadDTMF.zip</a>
 
+<h2>RETRO</h2>
+También stoy creando una versión retro <b>(GAMEPAD.PAS)</b>compatible con 8086, para que funcione en cualquier equipo viejo (IBM PC XT), así como emulado por medio del DOSBOX, lo que se traduce en que funciona en casi cualquier plataforma, como por ejemplo ANDROID.
+El prototipo está en PASCAL, pero se portará a C--.
+<center><img src="capturaMsdos.gif"></center>
+Se usa el puerto de joystick con la interrupción 0x15h, usando sólo los 3 bits altos 01110000b de los botones, similar a la versión de VB6, pero aqui no se puede modificar los botones.
+
+<ul>
+ <li><b>STQ</b> (bit 7)</li>
+ <li><b>Q4</b> (bit 6)</li>
+ <li><b>Q3</b> He usado la cruceta mover derecho analógico</li>
+ <li><b>Q2</b> He usado la cruceta mover abajo analógico</li>
+ <li><b>Q1</b> (bit 5)</li>
+</ul>
+
+Debemos pues remapear desde el DOSBOX los botones del joystick 1 el 2, de forma que 
+
+
 <h2>Histórico</h2>
 <ul>
  <li><b>2019/04/18</b> Versión semioptimizada que permite decodificar hasta con 150 milis de espera</li>
