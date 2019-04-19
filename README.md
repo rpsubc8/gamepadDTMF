@@ -73,7 +73,7 @@ Si no queremos compilar el programa, podemos hacer uso de la versión ya compila
 <a href="GamePadDTMF.zip">GamePadDTMF.zip</a>
 
 <h2>RETRO</h2>
-También se encuentra disponible una versión retro <b>(GAMEPAD.PAS)</b>compatible con 8086, para que funcione en cualquier equipo viejo (IBM PC XT), así como emulado por medio del DOSBOX, lo que se traduce en que funciona en casi cualquier plataforma, como por ejemplo ANDROID.
+También se encuentra disponible una versión retro <b>(GAMEPAD.PAS)</b> compatible con 8086, para que funcione en cualquier equipo viejo (IBM PC XT), así como emulado por medio del DOSBOX, lo que se traduce en que funciona en casi cualquier plataforma, como por ejemplo ANDROID.
 El prototipo está en PASCAL, pero se portará a C--.
 <center><img src="capturaMsdos.gif"></center>
 Se usa el puerto de joystick con la interrupción 0x15h, usando sólo los 3 bits altos 01110000b de los botones, similar a la versión de VB6, pero aqui no se puede modificar los botones.
@@ -86,7 +86,7 @@ Se usa el puerto de joystick con la interrupción 0x15h, usando sólo los 3 bits
  <li><b>Q1</b> (bit 5)</li>
 </ul>
 
-Debemos pues remapear desde el DOSBOX los botones del joystick 1 y el 2, de forma que los botones de nuestro gamepad real apunten al joystick virtual a emular (IBM PC):
+Debemos pues remapear desde el DOSBOX (pulsar ctrl+F1) los botones del joystick 1 y el 2, de forma que los botones de nuestro gamepad real apunten al joystick virtual a emular (IBM PC):
 <ul>
  <li>1 (Axis 1/2) - Q1</li>
  <li>2 (Axis 1/2) - Q4</li>
