@@ -89,7 +89,7 @@ Se usa el puerto de joystick con la interrupción 0x15h, usando sólo los 3 bits
 Debemos pues remapear desde el DOSBOX los botones del joystick 1 y el 2, de forma que los botones de nuestro gamepad real apunten al joystick virtual a emular (IBM PC):
 <ul>
  <li>1 (Axis 1/2) - Q1</li>
- <li>2 (Axis 1/2) - Q4<li>
+ <li>2 (Axis 1/2) - Q4</li>
  <li>3 (Asix 3/4) - STQ</li>
  <li>cruceta derecha - Q3</li>
  <li>cruceta abajo - Q2</li>
