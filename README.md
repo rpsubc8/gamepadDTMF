@@ -99,6 +99,6 @@ Debemos pues remapear desde el DOSBOX (pulsar ctrl+F1) los botones del joystick 
 
 <h2>Histórico</h2>
 <ul>
- <li><b>2019/04/19</b> Versión para MSDOS (DOSBOX)</li>
+ <li><b>2019/04/19</b> Versión para MSDOS (DOSBOX). Tiene fallos, falta depurarla</li>
  <li><b>2019/04/18</b> Versión semioptimizada que permite decodificar hasta con 150 milis de espera</li>
 </ul>
