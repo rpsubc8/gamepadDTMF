@@ -95,10 +95,12 @@ Debemos pues remapear desde el DOSBOX (pulsar ctrl+F1) los botones del joystick 
  <li>cruceta abajo - Q2</li>
 </ul>
 <center><img src="capturaJoydosbox.gif"></center>
+Como se trabaja desde un emulador, existe un lag, que si ocurren tonos muy seguidos sin separación (silencio), no detecta un cambio de pulso en STQ, por lo que no detectará bien el digito. Se recomienda usar el generador de teclado DTMF a mano, ya que ahi si se introduce silencio.
 
 
 <h2>Histórico</h2>
 <ul>
+ <li><b>2019/04/22</b> Corregida versión MSDOS</li>
  <li><b>2019/04/19</b> Versión para MSDOS (DOSBOX). Tiene fallos, falta depurarla</li>
  <li><b>2019/04/18</b> Versión semioptimizada que permite decodificar hasta con 150 milis de espera</li>
 </ul>
