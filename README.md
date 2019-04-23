@@ -74,7 +74,7 @@ Si no queremos compilar el programa, podemos hacer uso de la versión ya compila
 
 <h2>RETRO</h2>
 También se encuentra disponible una versión retro <b>(GAMEPAD.PAS)</b> compatible con 8086, para que funcione en cualquier equipo viejo (IBM PC XT), así como emulado por medio del DOSBOX, lo que se traduce en que funciona en casi cualquier plataforma, como por ejemplo ANDROID.
-El prototipo está en PASCAL, pero se portará a C--.
+El prototipo está en PASCAL.
 <center><img src="capturaMsdos.gif"></center>
 Se usa el puerto de joystick con la interrupción 0x15h, usando sólo los 3 bits altos 01110000b de los botones, similar a la versión de VB6, pero aqui no se puede modificar los botones.
 
@@ -97,10 +97,13 @@ Debemos pues remapear desde el DOSBOX (pulsar ctrl+F1) los botones del joystick 
 <center><img src="capturaJoydosbox.gif"></center>
 Como se trabaja desde un emulador, existe un lag, que si ocurren tonos muy seguidos sin separación (silencio), no detecta un cambio de pulso en STQ, por lo que no detectará bien el digito. Se recomienda usar el generador de teclado DTMF a mano, ya que ahi si se introduce silencio.
 
+He dejado una versión minima (228 bytes), pero tiene fallos. Está realizada en C--, pero se puede reducir aún más su tamaño.
+
 
 <h2>Histórico</h2>
 <ul>
- <li><b>2019/04/22</b> Corregida versión MSDOS</li>
- <li><b>2019/04/19</b> Versión para MSDOS (DOSBOX). Tiene fallos, falta depurarla</li>
+ <li><b>2019/04/23</b> Creada la versión más pequeña del mundo MSDOS y DOSBOX en C-- (228 bytes) (no funciona bien)</li>
+ <li><b>2019/04/22</b> Corregida versión MSDOS (PASCAL) funciona OK</li>
+ <li><b>2019/04/19</b> Versión para MSDOS y DOSBOX (PASCAL). Tiene fallos, falta depurarla</li>
  <li><b>2019/04/18</b> Versión semioptimizada que permite decodificar hasta con 150 milis de espera</li>
 </ul>
