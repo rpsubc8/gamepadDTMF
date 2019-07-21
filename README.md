@@ -1,4 +1,70 @@
 # Gamepad decodificador DTMF
+Thanks to the MT8870 chip, connecting the outputs of STQ, Q4, Q3, Q2 and Q1 to a transistor allowing to open or close
+the buttons of a GAMEPAD, DTMF tones can be decoded. We only need 5 pins (control buttons)
+It has been created as proof of concept a simple program in VB6 (to work in old equipment W95) to be able to
+read the buttons and translate it to DTMF tones.
+The program is not optimized, so send the tones slowly.
+You can use the web generator
+<a href="http://mamclain.com/?page=RND_SOFTWARE_DTMF_WEB_APP">http://mamclain.com/?page=RND_SOFTWARE_DTMF_WEB_APP</a>
+
+Can be tested with Windows' own joystick tester
+<center><img src="capturaGamepad.gif"></center>
+It is recommended to put 500 ms in the ms Delay Between Digits at the time of sending.
+
+So far we have the hardware logic part. Therefore, we enter in the section to build an application that translates the button presses in the binary codes that at the end are DTMF codes.
+<ul>
+ <li><b>0001</b> 1</li>
+ <li><b>0010</b> 2</li>
+ <li><b>0011</b> 3</li>
+ <li><b>0100</b> 4</li>
+ <li><b>0101</b> 5</li>
+ <li><b>0110</b> 6</li>
+ <li><b>0111</b> 7</li>
+ <li><b>1000</b> 8</li>
+ <li><b>1001</b> 9</li>
+ <li><b>1010</b> 10 0</li>
+ <li><b>1011</b> 11 *</li>
+ <li><b>1100</b> 12 #</li>
+ <li><b>1101</b> 13 A</li>
+ <li><b>1110</b> 14 B</li>
+ <li><b>1111</b> 15 C</li>
+ <li><b>0000</b> 16 D</li>
+</ul>
+The program in Visual Basic, allows to select which buttons we want to use of the control as well as to which pin of the MT8870
+is associated. The command that has been used has been opted for:
+<ul>
+ <li><b>STQ</b> (10)</li>
+ <li><b>Q4</b> (01)</li>
+ <li><b>Q3</b> (X1) He usado la cruceta mover derecho analógico</li>
+ <li><b>Q2</b> (Y1) He usado la cruceta mover abajo analógico</li>
+ <li><b>Q1</b> (9)</li>
+</ul>
+<center><img src="capturaVbasic6.gif"></center>
+X1 and Y1 are the X and Y axes (analog). In this case, it is so because I have used the NES usb retro controller and only
+4 digital buttons are available, being the analogical cross. On ASIX (axes) it is not possible to press left and
+right at the same time, as well as up or down (take it into account when soldering), as well as the 4 buttons,
+I recommend using all digital buttons, and the STQ always use digital.
+<center><img src="capturaSoldar01.jpg"></center>
+In the readings of the Asix (X1 and Y1) being analogical a value greater than 33768 is checked by code so that it is a logical 1, since it means that we have pressed the button or to the right (greater than 32768 that would be the center) or downwards.
+
+The concept is very simple, being the most difficult part in the manualities, to leave the control well prepared. The MT8870 can be powered with the 5 volts of usb, which we can take out following the cables of the control with a mulitester. The mass follows the same concept.
+The buttons of the controls, usually join 2 circuits, leaving the mass in common. To be sure we will look with a multitester the mass. What we are interested in is soldering the part of the button that is not mass. That part will go to the transistor collector. Since masses are common, we don't need to weld all those parts. At the base of each transistor, we must connect a resistance of 100 Ohms, as protection. The transistor is worth any NPN, in particular I have used the 2N3904, which is the simplest and cheapest to get.
+Each output of the MT8870 (STQ, Q4, Q3, Q2 and Q1), goes to the resistance of 100 Ohms, and this in series goes to the base of the transistor (2N3904), while the collector joins it to the part of the button of the control that we want to activate and the emitter to the mass of the control.
+<center><img src="capturaSoldar03.jpg"></center>
+
+It is necessary to emphasize, that the cheaper the control, the less possibilities exist that it is possible to weld well to the part of the button, reason why we will have to make sure to put once welded of simple way, glue above to make pressure.
+<center><img src="capturaSoldar02.jpg"></center>
+
+
+Then we make a hole with the drill to be able to introduce the audio jack of the MT8870 module when we want to connect it so that it looks good, and finished:
+<center><img src="capturaSoldar04.jpg"></center>
+
+Once we test the program, we must hit the button <b>start joystick </b> and of course have the gamepad connected. If everything is correct, and the buttons have been chosen correctly, we will see the status of up to the first 24 buttons of the gamepad and below all DTMF codes that are decoded in real time, the sound source that we have connected.
+
+
+
+
+# Gamepad decodificador DTMF
 Gamepad HID decode DTMF<br>
 Gracias al chip MT8870, conectando las salidas de STQ, Q4, Q3, Q2 y Q1 a un transistor permitiendo abrir o cerrar
 los botones de un GAMEPAD, se puede decodificar tonos DTMF. Tan sólo necesitamos 5 pines (botones de mando)
