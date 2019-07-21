@@ -131,8 +131,7 @@ Use the FLIP tool and put the chip in DFU mode.
  <li><b>2019/04/18</b> Semioptimized version that allows to decode up to 150 milis of waiting </li>
 </ul>
 
-
-
+<br><br><br><br><br><br>
 
 
 # Gamepad decodificador DTMF
