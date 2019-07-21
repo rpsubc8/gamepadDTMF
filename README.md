@@ -99,9 +99,35 @@ Como se trabaja desde un emulador, existe un lag, que si ocurren tonos muy segui
 
 He dejado una versión minima (228 bytes), pero tiene fallos. Está realizada en C--, pero se puede reducir aún más su tamaño.
 
+<h2>ARDUINO HID</h2>
+Si se dispone de una placa Arduino uno R3 ATMEGA328 con el chip de comunicaciones ATMEGA 16u2, se puede hacer uso del código modificado big_joystick_dtmf para poder emular un joystick de 40 botones HID, que se activan por las señales del MT8870 que hemos conectado a los pines:
+<ul>
+ <li>stq - 2</li>
+ <li>q4 - 3</li>
+ <li>q3 - 4</li>
+ <li>q2 - 5</li>
+ <li>q1 - 6</li>
+</ul> 
+
+Los botones del mando son:
+<ul>
+ <li>stq - 10</li>
+ <li>q4 - 1</li>
+ <li>q3 - 2</li>
+ <li>q2 - 3</li>
+ <li>q1 - 4</li>
+</ul>
+
+Se requiere previamente flashear el chip ATMEGA16u2 con:
+
+https://github.com/harlequin-tech/arduino-usb
+
+Se debe usar la herramienta FLIP y poner el chip en modo DFU.
+
 
 <h2>Histórico</h2>
 <ul>
+ <li><b>2019/05/21</b> Arduino R3 ATMEGA16u2 big_joystick_dtmf convierte MT8870 en HID joystick</li>
  <li><b>2019/04/23</b> Creada la versión más pequeña del mundo MSDOS y DOSBOX en C-- (228 bytes) (no funciona bien)</li>
  <li><b>2019/04/22</b> Corregida versión MSDOS (PASCAL) funciona OK</li>
  <li><b>2019/04/19</b> Versión para MSDOS y DOSBOX (PASCAL). Tiene fallos, falta depurarla</li>
