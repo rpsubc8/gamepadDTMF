@@ -1,4 +1,4 @@
-# Gamepad decodificador DTMF
+# Gamepad decoder DTMF
 Thanks to the MT8870 chip, connecting the outputs of STQ, Q4, Q3, Q2 and Q1 to a transistor allowing to open or close
 the buttons of a GAMEPAD, DTMF tones can be decoded. We only need 5 pins (control buttons)
 It has been created as proof of concept a simple program in VB6 (to work in old equipment W95) to be able to
@@ -60,6 +60,76 @@ Then we make a hole with the drill to be able to introduce the audio jack of the
 <center><img src="capturaSoldar04.jpg"></center>
 
 Once we test the program, we must hit the button <b>start joystick </b> and of course have the gamepad connected. If everything is correct, and the buttons have been chosen correctly, we will see the status of up to the first 24 buttons of the gamepad and below all DTMF codes that are decoded in real time, the sound source that we have connected.
+
+<h2>Conclusion </h2>
+With this we get to be able to decode DTMF with a control, without lack of any intermediate microcontroller, and most importantly, that the concept can be applied to old gamepads (MIDI connector), and retro equipment (MSDOS), as well as new, such as mobile, being able to portray the concept to HTML5.
+
+If we do not want to compile the program, we can make use of the already compiled version
+<a href="GamePadDTMF.zip">GamePadDTMF.zip</a>
+<br>
+
+<h2>RETRO</h2>
+There is also available a retro version <b>(GAMEPAD.PAS)</b> compatible with 8086, to work in any old equipment (IBM PC XT), as well as emulated by means of the DOSBOX, which means that it works in almost any platform, as for example ANDROID.
+The prototype is in PASCAL.
+<center><img src="capturaMsdos.gif"></center>
+The joystick port is used with the interruption 0x15h, using only the 3 high bits 01110000b of the buttons, similar to the version of VB6, but here you can not modify the buttons.
+
+<ul>
+ <li><b>STQ</b> (bit 7)</li>
+ <li><b>Q4</b> (bit 6)</li>
+ <li><b>Q3</b> I used the crosshead to move analogical right </li>
+ <li><b>Q2</b> I used the crosshead to move down analog </li>
+ <li><b>Q1</b> (bit 5)</li>
+</ul>
+
+We must then remap from the DOSBOX (press ctrl+F1) joystick buttons 1 and 2, so that the buttons of our real gamepad point to the virtual joystick to emulate (IBM PC):
+<ul>
+ <li>1 (Axis 1/2) - Q1</li>
+ <li>2 (Axis 1/2) - Q4</li>
+ <li>3 (Asix 3/4) - STQ</li>
+ <li>right cross - Q3</li>
+ <li>cross down - Q2</li>
+</ul>
+<center><img src="capturaJoydosbox.gif"></center>
+As you work from an emulator, there is a lag, that if tones occur very closely without separation (silence), does not detect a change of pulse in STQ, so it will not detect the digit well. It is recommended to use the DTMF keyboard generator by hand, because there if you enter silence.
+
+I left a minimum version (228 bytes), but it is faulty. It is made in C--, but its size can be reduced even more.
+
+<h2>ARDUINO HID </h2>
+If you have an Arduino R3 ATMEGA328 board with the ATMEGA 16u2 communications chip, you can use the modified code big_joystick_dtmf to emulate a joystick with 40 HID buttons, which are activated by the MT8870 signals we have connected to the pins:
+<ul>
+ <li>stq - 2</li>
+ <li>q4 - 3</li>
+ <li>q3 - 4</li>
+ <li>q2 - 5</li>
+ <li>q1 - 6</li>
+</ul> 
+
+The buttons on the remote are:
+<ul>
+ <li>stq - 10</li>
+ <li>q4 - 1</li>
+ <li>q3 - 2</li>
+ <li>q2 - 3</li>
+ <li>q1 - 4</li>
+</ul>
+
+It is required to previously flash the chip ATMEGA16u2 with:
+
+<a href="https://github.com/harlequin-tech/arduino-usb">https://github.com/harlequin-tech/arduino-usb</a>
+
+Use the FLIP tool and put the chip in DFU mode.
+
+
+<h2>Historical </h2>
+<ul>
+ <li><b>2019/05/21</b> Arduino R3 ATMEGA16u2 big_joystick_dtmf converts MT8870 into HID joystick</li>.
+ <li><b>2019/04/23</b> The world's smallest version of MSDOS and DOSBOX has been created in C-- (228 bytes) (does not work well)</li>
+ <li><b>2019/04/22</b> Corrected version MSDOS (PASCAL) works OK</li>
+ <li><b>2019/04/19</b> Version for MSDOS and DOSBOX (PASCAL). It has faults, it needs to be debugged </li>
+ <li><b>2019/04/18</b> Semioptimized version that allows to decode up to 150 milis of waiting </li>
+</ul>
+
 
 
 
