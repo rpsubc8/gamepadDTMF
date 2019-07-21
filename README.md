@@ -97,6 +97,7 @@ I left a minimum version (228 bytes), but it is faulty. It is made in C--, but i
 
 <h2>ARDUINO HID </h2>
 If you have an Arduino R3 ATMEGA328 board with the ATMEGA 16u2 communications chip, you can use the modified code big_joystick_dtmf to emulate a joystick with 40 HID buttons, which are activated by the MT8870 signals we have connected to the pins:
+<center><img src="arduinoHidJoystick.gif"></center>
 <ul>
  <li>stq - 2</li>
  <li>q4 - 3</li>
@@ -135,7 +136,6 @@ Use the FLIP tool and put the chip in DFU mode.
 
 
 # Gamepad decodificador DTMF
-Gamepad HID decode DTMF<br>
 Gracias al chip MT8870, conectando las salidas de STQ, Q4, Q3, Q2 y Q1 a un transistor permitiendo abrir o cerrar
 los botones de un GAMEPAD, se puede decodificar tonos DTMF. Tan sólo necesitamos 5 pines (botones de mando)
 Se ha creado como prueba de concepto un simple programa en VB6 (para que funcione en equipos viejos W95) para poder
@@ -237,6 +237,7 @@ He dejado una versión minima (228 bytes), pero tiene fallos. Está realizada en
 
 <h2>ARDUINO HID</h2>
 Si se dispone de una placa Arduino uno R3 ATMEGA328 con el chip de comunicaciones ATMEGA 16u2, se puede hacer uso del código modificado big_joystick_dtmf para poder emular un joystick de 40 botones HID, que se activan por las señales del MT8870 que hemos conectado a los pines:
+<center><img src="arduinoHidJoystick.gif"></center>
 <ul>
  <li>stq - 2</li>
  <li>q4 - 3</li>
