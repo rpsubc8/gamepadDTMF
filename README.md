@@ -129,8 +129,8 @@ I have created an html5 version that reads from the gamepad. It makes use of p5j
 
 <h2>Historical </h2>
 <ul>
- <li><b>2019/07/23</b> HTML5 port</li>.
- <li><b>2019/07/21</b> Arduino R3 ATMEGA16u2 big_joystick_dtmf converts MT8870 into HID joystick</li>.
+ <li><b>2019/07/23</b> HTML5 port</li>
+ <li><b>2019/07/21</b> Arduino R3 ATMEGA16u2 big_joystick_dtmf converts MT8870 into HID joystick</li>
  <li><b>2019/04/23</b> The world's smallest version of MSDOS and DOSBOX has been created in C-- (228 bytes) (does not work well)</li>
  <li><b>2019/04/22</b> Corrected version MSDOS (PASCAL) works OK</li>
  <li><b>2019/04/19</b> Version for MSDOS and DOSBOX (PASCAL). It has faults, it needs to be debugged </li>
