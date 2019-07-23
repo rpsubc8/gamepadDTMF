@@ -121,10 +121,16 @@ It is required to previously flash the chip ATMEGA16u2 with:
 
 Use the FLIP tool and put the chip in DFU mode.
 
+<br>
+<h2>HTML5</h2>
+<center><img src="capturaHTML5.gif"></center>
+I have created an html5 version that reads from the gamepad. It makes use of p5js.
+<br>
 
 <h2>Historical </h2>
 <ul>
- <li><b>2019/05/21</b> Arduino R3 ATMEGA16u2 big_joystick_dtmf converts MT8870 into HID joystick</li>.
+ <li><b>2019/07/23</b> HTML5 port</li>.
+ <li><b>2019/07/21</b> Arduino R3 ATMEGA16u2 big_joystick_dtmf converts MT8870 into HID joystick</li>.
  <li><b>2019/04/23</b> The world's smallest version of MSDOS and DOSBOX has been created in C-- (228 bytes) (does not work well)</li>
  <li><b>2019/04/22</b> Corrected version MSDOS (PASCAL) works OK</li>
  <li><b>2019/04/19</b> Version for MSDOS and DOSBOX (PASCAL). It has faults, it needs to be debugged </li>
@@ -260,10 +266,16 @@ https://github.com/harlequin-tech/arduino-usb
 
 Se debe usar la herramienta FLIP y poner el chip en modo DFU.
 
+<br>
+<h2>HTML5</h2>
+<center><img src="capturaHTML5.gif"></center>
+I have created an html5 version that reads from the gamepad. It makes use of p5js.
+<br>
 
 <h2>Histórico</h2>
 <ul>
- <li><b>2019/05/21</b> Arduino R3 ATMEGA16u2 big_joystick_dtmf convierte MT8870 en HID joystick</li>
+ <li><b>2019/07/23</b> Soporte HTML5</li>
+ <li><b>2019/07/21</b> Arduino R3 ATMEGA16u2 big_joystick_dtmf convierte MT8870 en HID joystick</li>
  <li><b>2019/04/23</b> Creada la versión más pequeña del mundo MSDOS y DOSBOX en C-- (228 bytes) (no funciona bien)</li>
  <li><b>2019/04/22</b> Corregida versión MSDOS (PASCAL) funciona OK</li>
  <li><b>2019/04/19</b> Versión para MSDOS y DOSBOX (PASCAL). Tiene fallos, falta depurarla</li>
