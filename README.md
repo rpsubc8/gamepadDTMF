@@ -131,9 +131,9 @@ I have created an html5 version that reads from the gamepad. It makes use of p5j
 <ul>
  <li><b>2019/07/23</b> HTML5 port</li>
  <li><b>2019/07/21</b> Arduino R3 ATMEGA16u2 big_joystick_dtmf converts MT8870 into HID joystick</li>
- <li><b>2019/04/23</b> The world's smallest version of MSDOS and DOSBOX has been created in C-- (228 bytes) (does not work well)</li>
+ <li><b>2019/04/23</b> The world's smallest version of MSDOS and DOSBOX has been created in C-- (228 bytes)</li>
  <li><b>2019/04/22</b> Corrected version MSDOS (PASCAL) works OK</li>
- <li><b>2019/04/19</b> Version for MSDOS and DOSBOX (PASCAL). It has faults, it needs to be debugged </li>
+ <li><b>2019/04/19</b> Version for MSDOS and DOSBOX (PASCAL).</li>
  <li><b>2019/04/18</b> Semioptimized version that allows to decode up to 150 milis of waiting </li>
 </ul>
 
@@ -276,8 +276,8 @@ I have created an html5 version that reads from the gamepad. It makes use of p5j
 <ul>
  <li><b>2019/07/23</b> Soporte HTML5</li>
  <li><b>2019/07/21</b> Arduino R3 ATMEGA16u2 big_joystick_dtmf convierte MT8870 en HID joystick</li>
- <li><b>2019/04/23</b> Creada la versión más pequeña del mundo MSDOS y DOSBOX en C-- (228 bytes) (no funciona bien)</li>
+ <li><b>2019/04/23</b> Creada la versión más pequeña del mundo MSDOS y DOSBOX en C-- (228 bytes)</li>
  <li><b>2019/04/22</b> Corregida versión MSDOS (PASCAL) funciona OK</li>
- <li><b>2019/04/19</b> Versión para MSDOS y DOSBOX (PASCAL). Tiene fallos, falta depurarla</li>
+ <li><b>2019/04/19</b> Versión para MSDOS y DOSBOX (PASCAL).</li>
  <li><b>2019/04/18</b> Versión semioptimizada que permite decodificar hasta con 150 milis de espera</li>
 </ul>
