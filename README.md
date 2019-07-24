@@ -65,7 +65,7 @@ Once we test the program, we must hit the button <b>start joystick </b> and of c
 With this we get to be able to decode DTMF with a control, without lack of any intermediate microcontroller, and most importantly, that the concept can be applied to old gamepads (MIDI connector), and retro equipment (MSDOS), as well as new, such as mobile, being able to portray the concept to HTML5.
 
 If we do not want to compile the program, we can make use of the already compiled version
-<a href="GamePadDTMF.zip">GamePadDTMF.zip</a>
+<a href="WINDOWS/VB6/GamePadDTMF.zip">GamePadDTMF.zip</a>
 <br>
 
 <h2>RETRO</h2>
@@ -123,7 +123,7 @@ Use the FLIP tool and put the chip in DFU mode.
 
 <br>
 <h2>HTML5</h2>
-<center><img src="capturaHTML5.gif"></center>
+<center><img src="capturas/capturaHTML5.gif"></center>
 I have created an html5 version that reads from the gamepad. It makes use of p5js.
 <br>
 
@@ -150,7 +150,7 @@ Se puede usar el generador de la web
 <a href="http://mamclain.com/?page=RND_SOFTWARE_DTMF_WEB_APP">http://mamclain.com/?page=RND_SOFTWARE_DTMF_WEB_APP</a>
 
 Se pueden hacer pruebas con el propio testeador de joystick de Windows
-<center><img src="capturaGamepad.gif"></center>
+<center><img src="capturas/capturaGamepad.gif"></center>
 
 Se recomienda poner 500 ms en el ms Delay Between Digits a la hora de enviar.
 
@@ -183,26 +183,26 @@ está asociado. El mando que se ha usado se ha optado por:
  <li><b>Q2</b> (Y1) He usado la cruceta mover abajo analógico</li>
  <li><b>Q1</b> (9)</li>
 </ul>
-<center><img src="capturaVbasic6.gif"></center>
+<center><img src="capturas/capturaVbasic6.gif"></center>
 
 El X1 e Y1 son los Ejes X e Y (analógicos). En este caso, es así porque he usado el mando retro de NES usb y sólo
 se dispone de 4 botones digitales, siendo la cruceta analógica. En los ASIX (ejes) no se puede pulsar izquierda y
 derecha al mismo tiempo, así como arriba o abajo (tenerlo en cuenta a la hora de soldar), así que de los 4 botones,
 sólo se pueden usar 2. Recomiendo usar todo botones digitales, y el STQ usarlo siempre digital.
-<center><img src="capturaSoldar01.jpg"></center>
+<center><img src="capturas/capturaSoldar01.jpg"></center>
 En las lecturas de los Asix (X1 e Y1) al ser analógico se comprueba por código un valor mayor de 33768 para que sea un 1 lógico, ya que significa que hemos pulsado el bóton o a la derecha (mayor a 32768 que sería el centro) o hacia abajo.
 
 El concepto es muy simple, estando la parte más dificil en las manualidades, para dejar el mando bien preparado. El MT8870 se puede alimentar con los 5 voltios del usb, que podemos sacarlo siguiendo los cables del mando con un mulitester. La masa, sigue el mismo concepto.
 Los botones de los mandos, normalmente suelen unir 2 circuitos, dejando la masa en común. Para estar seguros miraremos con un multitester la masa. Lo que nos interesa es soldar en la parte del botón que no es masa. Ese parte irá al colector del transistor. Como las masas son comunes, no necesitamos soldar todas esas partes. A la base de cada transistor, debemos conectar una resistencia de 100 Ohmios, como protección. El transistor vale cualquier NPN, en concreto he usado el 2N3904, que es el más simple y barato de conseguir.
 Cada salida del MT8870 (STQ, Q4, Q3, Q2 y Q1), van a la resistencia de 100 Ohmios, y esta en serie va a la base del transistor (2N3904), mientras que el colector lo únimos a la parte del botón del mando que queremos activar y el emisor a la masa del mando.
-<center><img src="capturaSoldar03.jpg"></center>
+<center><img src="capturas/capturaSoldar03.jpg"></center>
 
 Hay que destacar, que cuanto más barato sea el mando, menos posibilidades existen de que se pueda soldar bien a la parte del botón, por lo que deberemos asegurarnos de poner una vez soldado de manera simple, cola por encima para hacer presión.
-<center><img src="capturaSoldar02.jpg"></center>
+<center><img src="capturas/capturaSoldar02.jpg"></center>
 
 
 Luego hacemos un agujero con el taladro para poder introducir el jack de audio del modulo MT8870 cuando queramos conectarlo para que quede bien, y terminado:
-<center><img src="capturaSoldar04.jpg"></center>
+<center><img src="capturas/capturaSoldar04.jpg"></center>
 
 Una vez que probemos el programa, le debemos dar al botón de <b>start joystick</b> y por supuesto tener el gamepad conectado. Si todo es correcto, y se han elegido bien los botones, nos aparecerá el estado de hasta los 24 primeros botones del gamepad y debajo todos los codigos DTMF que se van decodificando en tiempo real, de la fuente de sonido que le hayamos conectado.
 
@@ -211,12 +211,12 @@ Una vez que probemos el programa, le debemos dar al botón de <b>start joystick<
 Con esto conseguimos poder decodificar DTMF con un mando, sin falta de ningún microcontrolador intermedio, y lo más importante, que el concepto se puede aplicar a gamepads viejos (conector MIDI), y equipos retro (MSDOS), así como nuevos, como móviles, pudiendo portar el concepto a HTML5.
 
 Si no queremos compilar el programa, podemos hacer uso de la versión ya compilada
-<a href="GamePadDTMF.zip">GamePadDTMF.zip</a>
+<a href="WINDOWS/VB6/GamePadDTMF.zip">GamePadDTMF.zip</a>
 
 <h2>RETRO</h2>
 También se encuentra disponible una versión retro <b>(GAMEPAD.PAS)</b> compatible con 8086, para que funcione en cualquier equipo viejo (IBM PC XT), así como emulado por medio del DOSBOX, lo que se traduce en que funciona en casi cualquier plataforma, como por ejemplo ANDROID.
 El prototipo está en PASCAL.
-<center><img src="capturaMsdos.gif"></center>
+<center><img src="capturas/capturaMsdos.gif"></center>
 Se usa el puerto de joystick con la interrupción 0x15h, usando sólo los 3 bits altos 01110000b de los botones, similar a la versión de VB6, pero aqui no se puede modificar los botones.
 
 <ul>
@@ -235,14 +235,14 @@ Debemos pues remapear desde el DOSBOX (pulsar ctrl+F1) los botones del joystick 
  <li>cruceta derecha - Q3</li>
  <li>cruceta abajo - Q2</li>
 </ul>
-<center><img src="capturaJoydosbox.gif"></center>
+<center><img src="capturas/capturaJoydosbox.gif"></center>
 Como se trabaja desde un emulador, existe un lag, que si ocurren tonos muy seguidos sin separación (silencio), no detecta un cambio de pulso en STQ, por lo que no detectará bien el digito. Se recomienda usar el generador de teclado DTMF a mano, ya que ahi si se introduce silencio.
 
 He dejado una versión minima (228 bytes), pero tiene fallos. Está realizada en C--, pero se puede reducir aún más su tamaño.
 
 <h2>ARDUINO HID</h2>
 Si se dispone de una placa Arduino uno R3 ATMEGA328 con el chip de comunicaciones ATMEGA 16u2, se puede hacer uso del código modificado big_joystick_dtmf para poder emular un joystick de 40 botones HID, que se activan por las señales del MT8870 que hemos conectado a los pines:
-<center><img src="arduinoHidJoystick.png"></center>
+<center><img src="capturas/arduinoHidJoystick.png"></center>
 <ul>
  <li>stq - 2</li>
  <li>q4 - 3</li>
@@ -268,7 +268,7 @@ Se debe usar la herramienta FLIP y poner el chip en modo DFU.
 
 <br>
 <h2>HTML5</h2>
-<center><img src="capturaHTML5.gif"></center>
+<center><img src="capturas/capturaHTML5.gif"></center>
 I have created an html5 version that reads from the gamepad. It makes use of p5js.
 <br>
 
