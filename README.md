@@ -1,6 +1,6 @@
 # Gamepad decoder DTMF
 Thanks to the MT8870 chip, connecting the outputs of STQ, Q4, Q3, Q2 and Q1 to a transistor allowing to open or close
-the buttons of a GAMEPAD, DTMF tones can be decoded. We only need 5 pins (control buttons)
+the buttons of a GAMEPAD, DTMF tones can be decoded. We only ineed 5 pins (control buttons)
 It has been created as proof of concept a simple program in VB6 (to work in old equipment W95) to be able to
 read the buttons and translate it to DTMF tones.
 The program is not optimized, so send the tones slowly.
@@ -8,7 +8,7 @@ You can use the web generator
 <a href="http://mamclain.com/?page=RND_SOFTWARE_DTMF_WEB_APP">http://mamclain.com/?page=RND_SOFTWARE_DTMF_WEB_APP</a>
 
 Can be tested with Windows' own joystick tester
-<center><img src="capturaGamepad.gif"></center>
+<center><img src="capturas/capturaGamepad.gif"></center>
 It is recommended to put 500 ms in the ms Delay Between Digits at the time of sending.
 
 So far we have the hardware logic part. Therefore, we enter in the section to build an application that translates the button presses in the binary codes that at the end are DTMF codes.
@@ -35,29 +35,29 @@ is associated. The command that has been used has been opted for:
 <ul>
  <li><b>STQ</b> (10)</li>
  <li><b>Q4</b> (01)</li>
- <li><b>Q3</b> (X1) He usado la cruceta mover derecho analógico</li>
- <li><b>Q2</b> (Y1) He usado la cruceta mover abajo analógico</li>
+ <li><b>Q3</b> (X1) I used the crosshead to move analog right</li>
+ <li><b>Q2</b> (Y1) I've used the crosshead to move down analog</li>
  <li><b>Q1</b> (9)</li>
 </ul>
-<center><img src="capturaVbasic6.gif"></center>
+<center><img src="capturas/capturaVbasic6.gif"></center>
 X1 and Y1 are the X and Y axes (analog). In this case, it is so because I have used the NES usb retro controller and only
 4 digital buttons are available, being the analogical cross. On ASIX (axes) it is not possible to press left and
 right at the same time, as well as up or down (take it into account when soldering), as well as the 4 buttons,
 I recommend using all digital buttons, and the STQ always use digital.
-<center><img src="capturaSoldar01.jpg"></center>
+<center><img src="capturas/capturaSoldar01.jpg"></center>
 In the readings of the Asix (X1 and Y1) being analogical a value greater than 33768 is checked by code so that it is a logical 1, since it means that we have pressed the button or to the right (greater than 32768 that would be the center) or downwards.
 
 The concept is very simple, being the most difficult part in the manualities, to leave the control well prepared. The MT8870 can be powered with the 5 volts of usb, which we can take out following the cables of the control with a mulitester. The mass follows the same concept.
 The buttons of the controls, usually join 2 circuits, leaving the mass in common. To be sure we will look with a multitester the mass. What we are interested in is soldering the part of the button that is not mass. That part will go to the transistor collector. Since masses are common, we don't need to weld all those parts. At the base of each transistor, we must connect a resistance of 100 Ohms, as protection. The transistor is worth any NPN, in particular I have used the 2N3904, which is the simplest and cheapest to get.
 Each output of the MT8870 (STQ, Q4, Q3, Q2 and Q1), goes to the resistance of 100 Ohms, and this in series goes to the base of the transistor (2N3904), while the collector joins it to the part of the button of the control that we want to activate and the emitter to the mass of the control.
-<center><img src="capturaSoldar03.jpg"></center>
+<center><img src="capturas/capturaSoldar03.jpg"></center>
 
 It is necessary to emphasize, that the cheaper the control, the less possibilities exist that it is possible to weld well to the part of the button, reason why we will have to make sure to put once welded of simple way, glue above to make pressure.
-<center><img src="capturaSoldar02.jpg"></center>
+<center><img src="capturas/capturaSoldar02.jpg"></center>
 
 
 Then we make a hole with the drill to be able to introduce the audio jack of the MT8870 module when we want to connect it so that it looks good, and finished:
-<center><img src="capturaSoldar04.jpg"></center>
+<center><img src="capturas/capturaSoldar04.jpg"></center>
 
 Once we test the program, we must hit the button <b>start joystick </b> and of course have the gamepad connected. If everything is correct, and the buttons have been chosen correctly, we will see the status of up to the first 24 buttons of the gamepad and below all DTMF codes that are decoded in real time, the sound source that we have connected.
 
@@ -71,7 +71,7 @@ If we do not want to compile the program, we can make use of the already compile
 <h2>RETRO</h2>
 There is also available a retro version <b>(GAMEPAD.PAS)</b> compatible with 8086, to work in any old equipment (IBM PC XT), as well as emulated by means of the DOSBOX, which means that it works in almost any platform, as for example ANDROID.
 The prototype is in PASCAL.
-<center><img src="capturaMsdos.gif"></center>
+<center><img src="capturas/capturaMsdos.gif"></center>
 The joystick port is used with the interruption 0x15h, using only the 3 high bits 01110000b of the buttons, similar to the version of VB6, but here you can not modify the buttons.
 
 <ul>
@@ -90,14 +90,14 @@ We must then remap from the DOSBOX (press ctrl+F1) joystick buttons 1 and 2, so 
  <li>right cross - Q3</li>
  <li>cross down - Q2</li>
 </ul>
-<center><img src="capturaJoydosbox.gif"></center>
+<center><img src="capturas/capturaJoydosbox.gif"></center>
 As you work from an emulator, there is a lag, that if tones occur very closely without separation (silence), does not detect a change of pulse in STQ, so it will not detect the digit well. It is recommended to use the DTMF keyboard generator by hand, because there if you enter silence.
 
 I left a minimum version (228 bytes), but it is faulty. It is made in C--, but its size can be reduced even more.
 
 <h2>ARDUINO HID </h2>
 If you have an Arduino R3 ATMEGA328 board with the ATMEGA 16u2 communications chip, you can use the modified code big_joystick_dtmf to emulate a joystick with 40 HID buttons, which are activated by the MT8870 signals we have connected to the pins:
-<center><img src="arduinoHidJoystick.png"></center>
+<center><img src="capturas/arduinoHidJoystick.png"></center>
 <ul>
  <li>stq - 2</li>
  <li>q4 - 3</li>
