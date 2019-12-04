@@ -127,8 +127,29 @@ Use the FLIP tool and put the chip in DFU mode.
 I have created an html5 version that reads from the gamepad. It makes use of p5js.
 <br>
 
+<br>
+<h2>AMSTRAD CPC 464</h2>
+<center><img src="capturas/cpcEmuladorBASIC.gif"></center>
+I created a very simple program to read from the game port of the AMSTRAD CPC 464 in BASIC. It allows to decode the tones following the same concept seen until now. I have tested it in emulator, so you have to remap the buttons or adapt the code to assign the correct pins:
+<ul>
+ <li>stq - Right</li>
+ <li>q4 - Up</li>
+ <li>q3 - Fire 1</li>
+ <li>q2 - Left</li>
+ <li>q1 - Down</li>
+</ul>
+<center><img src="capturas/cpcEmuladorDtmf.gif"></center>
+To remap the buttons I used the antimicro program
+<a href="https://github.com/AntiMicro/antimicro">https://github.com/AntiMicro/antimicro</a>
+And the Winape emulator.
+
+<br>
+
+
+
 <h2>Historical </h2>
 <ul>
+ <li><b>2019/12/04</b> AMSTRAD CPC 464 port</li>
  <li><b>2019/07/23</b> HTML5 port</li>
  <li><b>2019/07/21</b> Arduino R3 ATMEGA16u2 big_joystick_dtmf converts MT8870 into HID joystick</li>
  <li><b>2019/04/23</b> The world's smallest version of MSDOS and DOSBOX has been created in C-- (228 bytes)</li>
