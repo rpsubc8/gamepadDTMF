@@ -1,6 +1,6 @@
 # Gamepad decoder DTMF
 Thanks to the MT8870 chip, connecting the outputs of STQ, Q4, Q3, Q2 and Q1 to a transistor allowing to open or close
-the buttons of a GAMEPAD, DTMF tones can be decoded. We only ineed 5 pins (control buttons)
+the buttons of a GAMEPAD, DTMF tones can be decoded. We only ineed 5 pins (control buttons).
 It has been created as proof of concept a simple program in VB6 (to work in old equipment W95) to be able to
 read the buttons and translate it to DTMF tones.
 The program is not optimized, so send the tones slowly.
@@ -144,11 +144,26 @@ To remap the buttons I used the antimicro program
 And the Winape emulator.
 
 <br>
+<h2>PSX</h2>
+<center><img src="capturas/capturePSXemulator.gif"></center>
+I made a very simple program that reads the status of the buttons on the PSX controller. I have made it in emulator and remapenado the buttons that I need. The psyq development kit has been used.
+<center><img src="capturas/cpcEmuladorDtmf.gif"></center>
+<ul>
+ <li>stq - Select</li>
+ <li>q4 - R2</li>
+ <li>q3 - Triangle</li>
+ <li>q2 - Square</li>
+ <li>q1 - Circle</li>
+</ul>
+
+
+<br>
 
 
 
 <h2>Historical </h2>
 <ul>
+ <li><b>2019/12/05</b> PSX port (psyq)</li>
  <li><b>2019/12/04</b> AMSTRAD CPC 464 port</li>
  <li><b>2019/07/23</b> HTML5 port</li>
  <li><b>2019/07/21</b> Arduino R3 ATMEGA16u2 big_joystick_dtmf converts MT8870 into HID joystick</li>
@@ -163,7 +178,7 @@ And the Winape emulator.
 
 # Gamepad decodificador DTMF
 Gracias al chip MT8870, conectando las salidas de STQ, Q4, Q3, Q2 y Q1 a un transistor permitiendo abrir o cerrar
-los botones de un GAMEPAD, se puede decodificar tonos DTMF. Tan sólo necesitamos 5 pines (botones de mando)
+los botones de un GAMEPAD, se puede decodificar tonos DTMF. Tan sólo necesitamos 5 pines (botones de mando).
 Se ha creado como prueba de concepto un simple programa en VB6 (para que funcione en equipos viejos W95) para poder
 leer los botones y traducirlo a tonos DTMF.
 El programa está sin optimizar, así que hay que enviar los tonos lentamente.
@@ -310,9 +325,25 @@ Para remapear los botones utilicé el programa antimicro.
 Y el emulador de Winape.
 
 <br>
+<h2>PSX</h2>
+<center><img src="capturas/capturePSXemulator.gif"></center>
+He realizado un programa muy simple que lee el estado de los botones del mando de la PSX. Lo he realizado en emulador y  remapenado los botones que necesito. Se ha usado el kit de desarrollo psyq.
+<center><img src="capturas/cpcEmuladorDtmf.gif"></center>
+<ul>
+ <li>stq - Select</li>
+ <li>q4 - R2</li>
+ <li>q3 - Triangle</li>
+ <li>q2 - Square</li>
+ <li>q1 - Circle</li>
+</ul>
+
+
+<br>
+
 
 <h2>Histórico</h2>
 <ul>
+ <li><b>2019/12/05</b> PSX port (psyq)</li>
  <li><b>2019/12/04</b> AMSTRAD CPC 464 port</li>
  <li><b>2019/07/23</b> Soporte HTML5</li>
  <li><b>2019/07/21</b> Arduino R3 ATMEGA16u2 big_joystick_dtmf convierte MT8870 en HID joystick</li>
