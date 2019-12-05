@@ -153,7 +153,7 @@ And the Winape emulator.
 
 <br>
 <h2>PSX</h2>
-I made a very simple program that reads the status of the buttons on the PSX controller. I have made it in emulator and remapenado the buttons that I need. The psyq development kit has been used.
+I made a very simple program that reads the status of the buttons on the PSX controller. I have made it in emulator and remapping the buttons that I need. The psyq development kit has been used.
 <center><img src="capturas/capturePSXemulator.gif"></center>
 <ul>
  <li>stq - Select</li>
@@ -341,7 +341,7 @@ Y el emulador de Winape.
 
 <br>
 <h2>PSX</h2>
-He realizado un programa muy simple que lee el estado de los botones del mando de la PSX. Lo he realizado en emulador y  remapenado los botones que necesito. Se ha usado el kit de desarrollo psyq.
+He realizado un programa muy simple que lee el estado de los botones del mando de la PSX. Lo he realizado en emulador y  remapeando los botones que necesito. Se ha usado el kit de desarrollo psyq.
 <center><img src="capturas/capturePSXemulator.gif"></center>
 <ul>
  <li>stq - Select</li>
