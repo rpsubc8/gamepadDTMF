@@ -184,6 +184,14 @@ I made a very simple program that reads the status of the buttons on the PSX con
 
 
 # Gamepad decodificador DTMF
+<ul>
+ <li>Windows</li>
+ <li>MSDOS</li>
+ <li>Arduino Uno</li>
+ <li>HTML5</li>
+ <li>AMSTRAD CPC</li>
+ <li>PSX</li>
+</ul>
 Gracias al chip MT8870, conectando las salidas de STQ, Q4, Q3, Q2 y Q1 a un transistor permitiendo abrir o cerrar
 los botones de un GAMEPAD, se puede decodificar tonos DTMF. Tan sólo necesitamos 5 pines (botones de mando).
 Se ha creado como prueba de concepto un simple programa en VB6 (para que funcione en equipos viejos W95) para poder
