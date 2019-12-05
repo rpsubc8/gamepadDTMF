@@ -1,4 +1,12 @@
 # Gamepad decoder DTMF
+<ul>
+ <li>Windows</li>
+ <li>MSDOS</li>
+ <li>Arduino Uno</li>
+ <li>HTML5</li>
+ <li>AMSTRAD CPC</li>
+ <li>PSX</li>
+</ul>
 Thanks to the MT8870 chip, connecting the outputs of STQ, Q4, Q3, Q2 and Q1 to a transistor allowing to open or close
 the buttons of a GAMEPAD, DTMF tones can be decoded. We only ineed 5 pins (control buttons).
 It has been created as proof of concept a simple program in VB6 (to work in old equipment W95) to be able to
@@ -145,9 +153,8 @@ And the Winape emulator.
 
 <br>
 <h2>PSX</h2>
-<center><img src="capturas/capturePSXemulator.gif"></center>
 I made a very simple program that reads the status of the buttons on the PSX controller. I have made it in emulator and remapenado the buttons that I need. The psyq development kit has been used.
-<center><img src="capturas/cpcEmuladorDtmf.gif"></center>
+<center><img src="capturas/capturePSXemulator.gif"></center>
 <ul>
  <li>stq - Select</li>
  <li>q4 - R2</li>
@@ -326,9 +333,8 @@ Y el emulador de Winape.
 
 <br>
 <h2>PSX</h2>
-<center><img src="capturas/capturePSXemulator.gif"></center>
 He realizado un programa muy simple que lee el estado de los botones del mando de la PSX. Lo he realizado en emulador y  remapenado los botones que necesito. Se ha usado el kit de desarrollo psyq.
-<center><img src="capturas/cpcEmuladorDtmf.gif"></center>
+<center><img src="capturas/capturePSXemulator.gif"></center>
 <ul>
  <li>stq - Select</li>
  <li>q4 - R2</li>
