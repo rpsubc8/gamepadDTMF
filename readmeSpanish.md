@@ -1,12 +1,14 @@
 # Gamepad decodificador DTMF
 <ul>
- <li>Windows</li>
- <li>MSDOS</li>
- <li>Arduino Uno</li>
- <li>HTML5</li>
- <li>AMSTRAD CPC</li>
- <li>PSX</li>
+ <li><a href='#windows'>Windows<a/></li>
+ <li><a href='#msdos'>MSDOS<a/></li>
+ <li><a href='#arduino'>Arduino Uno<a/></li>
+ <li><a href='#html5'>HTML5<a/></li>
+ <li><a href='#amstrad'>AMSTRAD CPC<a/></li>
+ <li><li><a href='#psx'>PSX<a/></li>
 </ul>
+<br>
+<a name="msdos"><h2>Windows</h2></a>
 Gracias al chip MT8870, conectando las salidas de STQ, Q4, Q3, Q2 y Q1 a un transistor permitiendo abrir o cerrar
 los botones de un GAMEPAD, se puede decodificar tonos DTMF. Tan sólo necesitamos 5 pines (botones de mando).
 Se ha creado como prueba de concepto un simple programa en VB6 (para que funcione en equipos viejos W95) para poder
@@ -57,7 +59,7 @@ derecha al mismo tiempo, así como arriba o abajo (tenerlo en cuenta a la hora d
 sólo se pueden usar 2. Recomiendo usar todo botones digitales, y el STQ usarlo siempre digital.
 <center><img src="capturas/capturaSoldar01.jpg"></center>
 En las lecturas de los Asix (X1 e Y1) al ser analógico se comprueba por código un valor mayor de 33768 para que sea un 1 lógico, ya que significa que hemos pulsado el bóton o a la derecha (mayor a 32768 que sería el centro) o hacia abajo.
-
+<center><img src="capturas/gamepadCircuit.gif"></center>
 El concepto es muy simple, estando la parte más dificil en las manualidades, para dejar el mando bien preparado. El MT8870 se puede alimentar con los 5 voltios del usb, que podemos sacarlo siguiendo los cables del mando con un mulitester. La masa, sigue el mismo concepto.
 Los botones de los mandos, normalmente suelen unir 2 circuitos, dejando la masa en común. Para estar seguros miraremos con un multitester la masa. Lo que nos interesa es soldar en la parte del botón que no es masa. Ese parte irá al colector del transistor. Como las masas son comunes, no necesitamos soldar todas esas partes. A la base de cada transistor, debemos conectar una resistencia de 100 Ohmios, como protección. El transistor vale cualquier NPN, en concreto he usado el 2N3904, que es el más simple y barato de conseguir.
 Cada salida del MT8870 (STQ, Q4, Q3, Q2 y Q1), van a la resistencia de 100 Ohmios, y esta en serie va a la base del transistor (2N3904), mientras que el colector lo únimos a la parte del botón del mando que queremos activar y el emisor a la masa del mando.
@@ -72,8 +74,8 @@ Luego hacemos un agujero con el taladro para poder introducir el jack de audio d
 
 Una vez que probemos el programa, le debemos dar al botón de <b>start joystick</b> y por supuesto tener el gamepad conectado. Si todo es correcto, y se han elegido bien los botones, nos aparecerá el estado de hasta los 24 primeros botones del gamepad y debajo todos los codigos DTMF que se van decodificando en tiempo real, de la fuente de sonido que le hayamos conectado.
 
-
-<h2>RETRO</h2>
+<br>
+<a name="msdos"><h2>RETRO</h2></a>
 También se encuentra disponible una versión retro <b>(GAMEPAD.PAS)</b> compatible con 8086, para que funcione en cualquier equipo viejo (IBM PC XT), así como emulado por medio del DOSBOX, lo que se traduce en que funciona en casi cualquier plataforma, como por ejemplo ANDROID.
 El prototipo está en PASCAL.
 <center><img src="capturas/capturaMsdos.gif"></center>
@@ -99,8 +101,9 @@ Debemos pues remapear desde el DOSBOX (pulsar ctrl+F1) los botones del joystick 
 Como se trabaja desde un emulador, existe un lag, que si ocurren tonos muy seguidos sin separación (silencio), no detecta un cambio de pulso en STQ, por lo que no detectará bien el digito. Se recomienda usar el generador de teclado DTMF a mano, ya que ahi si se introduce silencio.
 
 He dejado una versión minima (228 bytes), pero tiene fallos. Está realizada en C--, pero se puede reducir aún más su tamaño.
+<br>
 
-<h2>ARDUINO HID</h2>
+<a name="arduino"><h2>ARDUINO HID</h2></a>
 Si se dispone de una placa Arduino uno R3 ATMEGA328 con el chip de comunicaciones ATMEGA 16u2, se puede hacer uso del código modificado big_joystick_dtmf para poder emular un joystick de 40 botones HID, que se activan por las señales del MT8870 que hemos conectado a los pines:
 <center><img src="capturas/arduinoHidJoystick.png"></center>
 <ul>
@@ -127,13 +130,13 @@ https://github.com/harlequin-tech/arduino-usb
 Se debe usar la herramienta FLIP y poner el chip en modo DFU.
 
 <br>
-<h2>HTML5</h2>
+<a name="html5"><h2>HTML5</h2></a>
 <center><img src="capturas/capturaHTML5.gif"></center>
 I have created an html5 version that reads from the gamepad. It makes use of p5js.
 <br>
 
 <br>
-<h2>AMSTRAD CPC 464</h2>
+<a name="amstrad"><h2>AMSTRAD CPC 464</h2></a>
 <center><img src="capturas/cpcEmuladorBASIC.gif"></center>
 He creado un programa muy sencillo para leer desde el puerto de juego del AMSTRAD CPC 464 en BASIC. Permite decodificar los tonos siguiendo el mismo concepto que hasta ahora. Lo he probado en emulador, así que tienes que remapear los botones o adaptar el código para asignar los pines correctos:
 <center><img src="capturas/cpcCircuit.gif"></center>
@@ -150,7 +153,7 @@ Para remapear los botones utilicé el programa antimicro.
 Y el emulador de Winape.
 
 <br>
-<h2>PSX</h2>
+<a name="psx"><h2>PSX</h2></a>
 He realizado un programa muy simple que lee el estado de los botones del mando de la PSX. Lo he realizado en emulador y  remapeando los botones que necesito. Se ha usado el kit de desarrollo psyq.
 <center><img src="capturas/capturePSXemulator.gif"></center>
 <ul>
