@@ -73,12 +73,6 @@ Luego hacemos un agujero con el taladro para poder introducir el jack de audio d
 Una vez que probemos el programa, le debemos dar al botón de <b>start joystick</b> y por supuesto tener el gamepad conectado. Si todo es correcto, y se han elegido bien los botones, nos aparecerá el estado de hasta los 24 primeros botones del gamepad y debajo todos los codigos DTMF que se van decodificando en tiempo real, de la fuente de sonido que le hayamos conectado.
 
 
-<h2>Conclusión</h2>
-Con esto conseguimos poder decodificar DTMF con un mando, sin falta de ningún microcontrolador intermedio, y lo más importante, que el concepto se puede aplicar a gamepads viejos (conector MIDI), y equipos retro (MSDOS), así como nuevos, como móviles, pudiendo portar el concepto a HTML5.
-
-Si no queremos compilar el programa, podemos hacer uso de la versión ya compilada
-<a href="WINDOWS/VB6/GamePadDTMF.zip">GamePadDTMF.zip</a>
-
 <h2>RETRO</h2>
 También se encuentra disponible una versión retro <b>(GAMEPAD.PAS)</b> compatible con 8086, para que funcione en cualquier equipo viejo (IBM PC XT), así como emulado por medio del DOSBOX, lo que se traduce en que funciona en casi cualquier plataforma, como por ejemplo ANDROID.
 El prototipo está en PASCAL.
@@ -142,12 +136,13 @@ I have created an html5 version that reads from the gamepad. It makes use of p5j
 <h2>AMSTRAD CPC 464</h2>
 <center><img src="capturas/cpcEmuladorBASIC.gif"></center>
 He creado un programa muy sencillo para leer desde el puerto de juego del AMSTRAD CPC 464 en BASIC. Permite decodificar los tonos siguiendo el mismo concepto que hasta ahora. Lo he probado en emulador, así que tienes que remapear los botones o adaptar el código para asignar los pines correctos:
+<center><img src="capturas/cpcCircuit.gif"></center>
 <ul>
  <li>stq - Derecha</li>
  <li>q4 - Arriba</li>
  <li>q3 - Fuego 1</li>
  <li>q2 - Izquierda</li>
- <li>q1 - Derecha</li>
+ <li>q1 - Abajo</li>
 </ul>
 <center><img src="capturas/cpcEmuladorDtmf.gif"></center>
 Para remapear los botones utilicé el programa antimicro.
@@ -167,6 +162,13 @@ He realizado un programa muy simple que lee el estado de los botones del mando d
 </ul>
 
 
+<br>
+
+<h2>Conclusión</h2>
+Con esto conseguimos poder decodificar DTMF con un mando, sin falta de ningún microcontrolador intermedio, y lo más importante, que el concepto se puede aplicar a gamepads viejos (conector MIDI), y equipos retro (MSDOS), así como nuevos, como móviles, pudiendo portar el concepto a HTML5.
+
+Si no queremos compilar el programa, podemos hacer uso de la versión ya compilada
+<a href="WINDOWS/VB6/GamePadDTMF.zip">GamePadDTMF.zip</a>
 <br>
 
 
