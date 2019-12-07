@@ -132,7 +132,7 @@ Se debe usar la herramienta FLIP y poner el chip en modo DFU.
 <br>
 <a name="html5"><h2>HTML5</h2></a>
 <center><img src="capturas/capturaHTML5.gif"></center>
-I have created an html5 version that reads from the gamepad. It makes use of p5js.
+He creado una versión html5 que lee desde gamepad el estado de los botones asociados a los pines del MT8870. Hace uso de p5js.
 <br>
 
 <br>
