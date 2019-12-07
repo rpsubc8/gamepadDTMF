@@ -5,7 +5,7 @@
  <li><a href='#arduino'>Arduino Uno<a/></li>
  <li><a href='#html5'>HTML5<a/></li>
  <li><a href='#amstrad'>AMSTRAD CPC<a/></li>
- <li><li><a href='#psx'>PSX<a/></li>
+ <li><a href='#psx'>PSX<a/></li>
 </ul>
 <br>
 <a name="msdos"><h2>Windows</h2></a>
