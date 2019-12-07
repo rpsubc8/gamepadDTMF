@@ -8,7 +8,7 @@
  <li><a href='#psx'>PSX<a/></li>
 </ul>
 <br>
-<a name="msdos"><h2>Windows</h2></a>
+<a name="windows"><h2>Windows</h2></a>
 Gracias al chip MT8870, conectando las salidas de STQ, Q4, Q3, Q2 y Q1 a un transistor permitiendo abrir o cerrar
 los botones de un GAMEPAD, se puede decodificar tonos DTMF. Tan sólo necesitamos 5 pines (botones de mando).
 Se ha creado como prueba de concepto un simple programa en VB6 (para que funcione en equipos viejos W95) para poder
