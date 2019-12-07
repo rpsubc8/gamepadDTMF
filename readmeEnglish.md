@@ -69,13 +69,6 @@ Then we make a hole with the drill to be able to introduce the audio jack of the
 
 Once we test the program, we must hit the button <b>start joystick </b> and of course have the gamepad connected. If everything is correct, and the buttons have been chosen correctly, we will see the status of up to the first 24 buttons of the gamepad and below all DTMF codes that are decoded in real time, the sound source that we have connected.
 
-<h2>Conclusion </h2>
-With this we get to be able to decode DTMF with a control, without lack of any intermediate microcontroller, and most importantly, that the concept can be applied to old gamepads (MIDI connector), and retro equipment (MSDOS), as well as new, such as mobile, being able to portray the concept to HTML5.
-
-If we do not want to compile the program, we can make use of the already compiled version
-<a href="WINDOWS/VB6/GamePadDTMF.zip">GamePadDTMF.zip</a>
-<br>
-
 <h2>RETRO</h2>
 There is also available a retro version <b>(GAMEPAD.PAS)</b> compatible with 8086, to work in any old equipment (IBM PC XT), as well as emulated by means of the DOSBOX, which means that it works in almost any platform, as for example ANDROID.
 The prototype is in PASCAL.
@@ -139,6 +132,7 @@ I have created an html5 version that reads from the gamepad. It makes use of p5j
 <h2>AMSTRAD CPC 464</h2>
 <center><img src="capturas/cpcEmuladorBASIC.gif"></center>
 I created a very simple program to read from the game port of the AMSTRAD CPC 464 in BASIC. It allows to decode the tones following the same concept seen until now. I have tested it in emulator, so you have to remap the buttons or adapt the code to assign the correct pins:
+<center><img src="capturas/cpcCircuit.gif"></center>
 <ul>
  <li>stq - Right</li>
  <li>q4 - Up</li>
@@ -165,6 +159,15 @@ I made a very simple program that reads the status of the buttons on the PSX con
 
 
 <br>
+
+<h2>Conclusion </h2>
+With this we get to be able to decode DTMF with a control, without lack of any intermediate microcontroller, and most importantly, that the concept can be applied to old gamepads (MIDI connector), and retro equipment (MSDOS), as well as new, such as mobile, being able to portray the concept to HTML5.
+
+If we do not want to compile the program, we can make use of the already compiled version
+<a href="WINDOWS/VB6/GamePadDTMF.zip">GamePadDTMF.zip</a>
+<br>
+
+
 
 
 
