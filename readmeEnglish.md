@@ -1,12 +1,14 @@
 # Gamepad decoder DTMF
 <ul>
- <li>Windows</li>
- <li>MSDOS</li>
- <li>Arduino Uno</li>
- <li>HTML5</li>
- <li>AMSTRAD CPC</li>
- <li>PSX</li>
+ <li><a href='#windows'>Windows<a/></li>
+ <li><a href='#msdos'>MSDOS<a/></li>
+ <li><a href='#arduino'>Arduino Uno<a/></li>
+ <li><a href='#html5'>HTML5<a/></li>
+ <li><a href='#amstrad'>AMSTRAD CPC<a/></li>
+ <li><a href='#psx'>PSX<a/></li>
 </ul>
+<br>
+<a name="windows"><h2>Windows</h2></a>
 Thanks to the MT8870 chip, connecting the outputs of STQ, Q4, Q3, Q2 and Q1 to a transistor allowing to open or close
 the buttons of a GAMEPAD, DTMF tones can be decoded. We only ineed 5 pins (control buttons).
 It has been created as proof of concept a simple program in VB6 (to work in old equipment W95) to be able to
@@ -55,6 +57,8 @@ I recommend using all digital buttons, and the STQ always use digital.
 <center><img src="capturas/capturaSoldar01.jpg"></center>
 In the readings of the Asix (X1 and Y1) being analogical a value greater than 33768 is checked by code so that it is a logical 1, since it means that we have pressed the button or to the right (greater than 32768 that would be the center) or downwards.
 
+<center><img src="capturas/gamepadCircuit.gif"></center>
+
 The concept is very simple, being the most difficult part in the manualities, to leave the control well prepared. The MT8870 can be powered with the 5 volts of usb, which we can take out following the cables of the control with a mulitester. The mass follows the same concept.
 The buttons of the controls, usually join 2 circuits, leaving the mass in common. To be sure we will look with a multitester the mass. What we are interested in is soldering the part of the button that is not mass. That part will go to the transistor collector. Since masses are common, we don't need to weld all those parts. At the base of each transistor, we must connect a resistance of 100 Ohms, as protection. The transistor is worth any NPN, in particular I have used the 2N3904, which is the simplest and cheapest to get.
 Each output of the MT8870 (STQ, Q4, Q3, Q2 and Q1), goes to the resistance of 100 Ohms, and this in series goes to the base of the transistor (2N3904), while the collector joins it to the part of the button of the control that we want to activate and the emitter to the mass of the control.
@@ -68,8 +72,9 @@ Then we make a hole with the drill to be able to introduce the audio jack of the
 <center><img src="capturas/capturaSoldar04.jpg"></center>
 
 Once we test the program, we must hit the button <b>start joystick </b> and of course have the gamepad connected. If everything is correct, and the buttons have been chosen correctly, we will see the status of up to the first 24 buttons of the gamepad and below all DTMF codes that are decoded in real time, the sound source that we have connected.
+<br>
 
-<h2>RETRO</h2>
+<a name="msdos"><h2>RETRO</h2></a>
 There is also available a retro version <b>(GAMEPAD.PAS)</b> compatible with 8086, to work in any old equipment (IBM PC XT), as well as emulated by means of the DOSBOX, which means that it works in almost any platform, as for example ANDROID.
 The prototype is in PASCAL.
 <center><img src="capturas/capturaMsdos.gif"></center>
@@ -95,8 +100,9 @@ We must then remap from the DOSBOX (press ctrl+F1) joystick buttons 1 and 2, so 
 As you work from an emulator, there is a lag, that if tones occur very closely without separation (silence), does not detect a change of pulse in STQ, so it will not detect the digit well. It is recommended to use the DTMF keyboard generator by hand, because there if you enter silence.
 
 I left a minimum version (228 bytes), but it is faulty. It is made in C--, but its size can be reduced even more.
+<br>
 
-<h2>ARDUINO HID </h2>
+<a name="arduino"><h2>ARDUINO HID</h2></a>
 If you have an Arduino R3 ATMEGA328 board with the ATMEGA 16u2 communications chip, you can use the modified code big_joystick_dtmf to emulate a joystick with 40 HID buttons, which are activated by the MT8870 signals we have connected to the pins:
 <center><img src="capturas/arduinoHidJoystick.png"></center>
 <ul>
@@ -123,13 +129,13 @@ It is required to previously flash the chip ATMEGA16u2 with:
 Use the FLIP tool and put the chip in DFU mode.
 
 <br>
-<h2>HTML5</h2>
+<a name="html5"><h2>HTML5</h2></a>
 <center><img src="capturas/capturaHTML5.gif"></center>
 I have created an html5 version that reads from the gamepad. It makes use of p5js.
 <br>
 
 <br>
-<h2>AMSTRAD CPC 464</h2>
+<a name="amstrad"><h2>AMSTRAD CPC 464</h2></a>
 <center><img src="capturas/cpcEmuladorBASIC.gif"></center>
 I created a very simple program to read from the game port of the AMSTRAD CPC 464 in BASIC. It allows to decode the tones following the same concept seen until now. I have tested it in emulator, so you have to remap the buttons or adapt the code to assign the correct pins:
 <center><img src="capturas/cpcCircuit.gif"></center>
@@ -146,7 +152,7 @@ To remap the buttons I used the antimicro program
 And the Winape emulator.
 
 <br>
-<h2>PSX</h2>
+<a name="psx"><h2>PSX</h2></a>
 I made a very simple program that reads the status of the buttons on the PSX controller. I have made it in emulator and remapping the buttons that I need. The psyq development kit has been used.
 <center><img src="capturas/capturePSXemulator.gif"></center>
 <ul>
