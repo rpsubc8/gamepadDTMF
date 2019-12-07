@@ -8,7 +8,7 @@
  <li><a href='#psx'>PSX<a/></li>
 </ul>
 <br>
-<a name="windows"><h2>Windows</h2></a>
+<a name="windows" id="windows"><h2>Windows</h2></a>
 Thanks to the MT8870 chip, connecting the outputs of STQ, Q4, Q3, Q2 and Q1 to a transistor allowing to open or close
 the buttons of a GAMEPAD, DTMF tones can be decoded. We only ineed 5 pins (control buttons).
 It has been created as proof of concept a simple program in VB6 (to work in old equipment W95) to be able to
@@ -74,7 +74,7 @@ Then we make a hole with the drill to be able to introduce the audio jack of the
 Once we test the program, we must hit the button <b>start joystick </b> and of course have the gamepad connected. If everything is correct, and the buttons have been chosen correctly, we will see the status of up to the first 24 buttons of the gamepad and below all DTMF codes that are decoded in real time, the sound source that we have connected.
 <br>
 
-<a name="msdos"><h2>RETRO</h2></a>
+<a name="msdos" id="msdos"><h2>RETRO</h2></a>
 There is also available a retro version <b>(GAMEPAD.PAS)</b> compatible with 8086, to work in any old equipment (IBM PC XT), as well as emulated by means of the DOSBOX, which means that it works in almost any platform, as for example ANDROID.
 The prototype is in PASCAL.
 <center><img src="capturas/capturaMsdos.gif"></center>
@@ -102,7 +102,7 @@ As you work from an emulator, there is a lag, that if tones occur very closely w
 I left a minimum version (228 bytes), but it is faulty. It is made in C--, but its size can be reduced even more.
 <br>
 
-<a name="arduino"><h2>ARDUINO HID</h2></a>
+<a name="arduino" id="arduino"><h2>ARDUINO HID</h2></a>
 If you have an Arduino R3 ATMEGA328 board with the ATMEGA 16u2 communications chip, you can use the modified code big_joystick_dtmf to emulate a joystick with 40 HID buttons, which are activated by the MT8870 signals we have connected to the pins:
 <center><img src="capturas/arduinoHidJoystick.png"></center>
 <ul>
@@ -129,13 +129,13 @@ It is required to previously flash the chip ATMEGA16u2 with:
 Use the FLIP tool and put the chip in DFU mode.
 
 <br>
-<a name="html5"><h2>HTML5</h2></a>
+<a name="html5" id="html5"><h2>HTML5</h2></a>
 <center><img src="capturas/capturaHTML5.gif"></center>
 I have created an html5 version that reads from the gamepad. It makes use of p5js.
 <br>
 
 <br>
-<a name="amstrad"><h2>AMSTRAD CPC 464</h2></a>
+<a name="amstrad" id="amstrad"><h2>AMSTRAD CPC 464</h2></a>
 <center><img src="capturas/cpcEmuladorBASIC.gif"></center>
 I created a very simple program to read from the game port of the AMSTRAD CPC 464 in BASIC. It allows to decode the tones following the same concept seen until now. I have tested it in emulator, so you have to remap the buttons or adapt the code to assign the correct pins:
 <center><img src="capturas/cpcCircuit.gif"></center>
@@ -152,7 +152,7 @@ To remap the buttons I used the antimicro program
 And the Winape emulator.
 
 <br>
-<a name="psx"><h2>PSX</h2></a>
+<a name="psx" id="psx"><h2>PSX</h2></a>
 I made a very simple program that reads the status of the buttons on the PSX controller. I have made it in emulator and remapping the buttons that I need. The psyq development kit has been used.
 <center><img src="capturas/capturePSXemulator.gif"></center>
 <ul>
